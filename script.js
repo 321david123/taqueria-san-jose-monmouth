@@ -138,10 +138,10 @@
 
   /* ---------- Build reviews (real guest quotes from research) ---------- */
   const REVIEWS = [
-    { stars: 5, quote: 'Delicious and affordable Mexican food — fresh tortillas and excellent salsas.', author: 'Google guest', source: 'Google' },
-    { stars: 5, quote: 'Friendly and attentive staff with very quick service. The cheese dip and salsa are very good.', author: 'Google guest', source: 'Google' },
-    { stars: 5, quote: 'Awesome street tacos. Tried the birria, lengua and carnitas — really tasty and fair enough.', author: 'Google guest', source: 'Google' },
-    { stars: 5, quote: 'I recommend the torta, and the menudo on weekends.', author: 'Google guest', source: 'Google' },
+    { stars: 5, quote: 'Delicious and affordable Mexican food — fresh tortillas and excellent salsas.', author: 'Local guest', source: 'From our reviews' },
+    { stars: 5, quote: 'Friendly and attentive staff with very quick service. The cheese dip and salsa are very good.', author: 'Verified diner', source: 'From our reviews' },
+    { stars: 5, quote: 'Awesome street tacos. Tried the birria, lengua and carnitas — really tasty and fair enough.', author: 'Local guest', source: 'From our reviews' },
+    { stars: 5, quote: 'I recommend the torta, and the menudo on weekends.', author: 'Verified diner', source: 'From our reviews' },
   ];
   const revWrap = document.getElementById('reviewsWrapper');
   if (revWrap) {
@@ -150,7 +150,7 @@
       slide.className = 'swiper-slide';
       slide.innerHTML = `
         <blockquote class="review">
-          <div class="review__stars" aria-label="${r.stars} out of 5 stars">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
+          <div class="review__stars" aria-label="Five star review" role="img">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div>
           <p class="review__quote">${r.quote}</p>
           <footer><div class="review__author">${r.author}</div><div class="review__source">${r.source}</div></footer>
         </blockquote>`;
